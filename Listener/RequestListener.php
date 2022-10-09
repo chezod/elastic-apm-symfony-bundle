@@ -29,7 +29,7 @@ class RequestListener implements EventSubscriberInterface
     {
         return [
             KernelEvents::REQUEST => [
-                ['setTransactionName', -10],
+                ['setTransactionName', 10],
             ],
         ];
     }
