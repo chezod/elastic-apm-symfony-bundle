@@ -13,6 +13,7 @@ use ElasticApmBundle\Listener\ExceptionListener;
 use ElasticApmBundle\Listener\ResponseListener;
 use ElasticApmBundle\TransactionNamingStrategy\ControllerNamingStrategy;
 use ElasticApmBundle\TransactionNamingStrategy\RouteNamingStrategy;
+use ElasticApmBundle\TransactionNamingStrategy\RoutePathNamingStrategy;
 use ElasticApmBundle\TransactionNamingStrategy\TransactionNamingStrategyInterface;
 use ElasticApmBundle\TransactionNamingStrategy\UriNamingStrategy;
 use Symfony\Component\Config\FileLocator;
@@ -104,6 +105,8 @@ class ElasticApmExtension extends Extension
                 return ControllerNamingStrategy::class;
             case 'route':
                 return RouteNamingStrategy::class;
+            case 'route-path':
+                return RoutePathNamingStrategy::class;
             case 'uri':
                 return UriNamingStrategy::class;
             case 'service':

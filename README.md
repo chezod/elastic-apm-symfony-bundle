@@ -86,8 +86,9 @@ This bundle does not integrate RUM (see https://www.elastic.co/guide/en/apm/serv
 
 ## Transaction naming strategies
 
-The bundle comes with three built-in transaction naming strategies:
+The bundle comes with four built-in transaction naming strategies:
 - `route`
+- `route-path`
 - `controller`
 - `uri`
   
